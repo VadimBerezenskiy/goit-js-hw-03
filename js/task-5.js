@@ -6,7 +6,23 @@ const products = [
 ];
 
 const getAllPropValues = function (arr, prop) {
-  // твой код
+  let value = [];
+  const quantity = [];
+  for (const product of arr) {
+    if (prop === 'name') {
+      value.push(product.name);
+    }
+    if (prop === 'quantity') {
+      value.push(product.quantity);
+    }
+    if (prop === 'category') {
+      value.push(product.category);
+    }
+    if (value[0] === undefined) {
+      value = [];
+    }
+  }
+  return value;
 };
 
 /*
