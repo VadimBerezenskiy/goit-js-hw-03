@@ -6,20 +6,10 @@ const products = [
 ];
 
 const getAllPropValues = function (arr, prop) {
-  let value = [];
-  const quantity = [];
+  const value = [];
   for (const product of arr) {
-    if (prop === 'name') {
-      value.push(product.name);
-    }
-    if (prop === 'quantity') {
-      value.push(product.quantity);
-    }
-    if (prop === 'category') {
-      value.push(product.category);
-    }
-    if (value[0] === undefined) {
-      value = [];
+    if (product[prop] !== undefined) {
+      value.push(product[prop]);
     }
   }
   return value;
